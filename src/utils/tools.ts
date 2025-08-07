@@ -1,7 +1,7 @@
 
-import {BookDto, BookGenres, BookStatus, PickRecord} from "../model/Book.ts";
+import {BookDto, BookGenres, BookStatus} from "../model/Book.ts";
 import { v4 as uuidv4 } from 'uuid';
-import {HttpError} from "../errorHandler/HttpError.js";
+import {HttpError} from "../errorHandler/HttpError.ts";
 
 function getGenre(genre: string) {
     const bookGenre = Object.values(BookGenres).find(v => v === genre);
