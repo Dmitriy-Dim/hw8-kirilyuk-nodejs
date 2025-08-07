@@ -21,8 +21,7 @@ export class BookController {
 
         const result = this.libService.addBook(book);
         console.log(result)
-        if(result)
-            res.status(201).json(book)
+        if(result) res.status(201).json(book)
         else throw new HttpError(409, 'Book not added. Id conflict')
     }
 }

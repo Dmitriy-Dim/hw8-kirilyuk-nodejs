@@ -7,10 +7,8 @@ export class LibServiceImplEmbedded implements LibService{
     addBook(book: Book): boolean {
         console.log("book")
         const index = this.books.findIndex(item => item.id === book.id )
-        if(index === -1) {
-            this.books.push(book);
-            return true;
-        }
+        if(index === -1) {this.books.push(book);
+            return true;}
         return false;
     }
 
